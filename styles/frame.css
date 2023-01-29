@@ -5,7 +5,7 @@
   --secRed: #ff4453;
   --gray: #858585;
 }
-* {
+:not(li,a) {
   transition: all 200ms ease-in-out;
 }
 .container {
@@ -21,6 +21,7 @@
   font-weight: normal;
 }
 .title {
+  line-height: 35px;
   width: fit-content;
   margin-bottom: 15px;
   border-bottom: solid 4px var(--secRed);
@@ -31,8 +32,8 @@
   max-height: 400px;
   overflow-x: hidden;
 }
-.wrapper {
-  padding: 0 50px;
+.news1 .wrapper {
+  margin-right: 50px;
   min-width: calc(1040px - 100px);
   min-height: 400px;
   display: grid;
@@ -40,8 +41,15 @@
   grid-template-columns: repeat(2, auto);
   gap: 20px;
 }
-.wrapper img{
+.wrapper img {
   border-radius: 20px;
+}
+.wrapper:hover{
+  background-color: rgba(0,0,0, 0.02);
+  cursor: pointer;
+}
+.wrapper img:hover{
+  filter: brightness(0.75);
 }
 .news1 {
   display: flex;
@@ -61,21 +69,41 @@
   color: var(--secRed);
 }
 .content h1:not(.title h1) {
-  font-size: 25px;
+  font-size: 18px;
   font-weight: bold;
 }
 .content h5 {
-  margin: 10px 0;
+  margin-top: 10px;
   color: var(--secRed);
 }
 .content p,
 .content h6 {
+  margin-top: 10px;
   color: var(--gray);
 }
 /* frame 2 */
 .second {
   display: grid;
-  grid-template-columns: 600px 1fr;
+  grid-template-columns: 735px 290px;
 }
-.other {
+.upcoming {
+  max-height: calc(600px - 39px);
+  overflow-y: scroll;
+}
+.upcoming h4 {
+  color: var(--gray);
+  border-top: solid 2px rgba(0,0,0,0.2);
+  padding: 10px 0;
+  font-weight: bold;
+}
+.upcoming h4:hover {
+  color: black;
+  font-style: italic;
+}
+.news2 .wrapper {
+  padding: 15px 0;
+  display: flex;
+  gap: 20px;
+  margin-right: 20px;
+  border-bottom: solid 2px rgba(0,0,0,0.2);
 }
