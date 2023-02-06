@@ -2,35 +2,41 @@
   --blue: #0f113e;
   --green: #148455;
   --red: #a6323c;
-  --secRed: #FF4453;
+  --secRed: #ff4453;
+  --gray: #858585;
 }
 * {
   scroll-behavior: smooth !important;
   box-sizing: border-box;
+  scroll-padding-top: 70px;
   padding: 0;
   margin: 0;
 }
+li {
+  list-style: none;
+}
 html,
 body {
+  overflow-x: hidden;
   background-color: #f2f2f2;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
-button:hover{
+button:hover {
   cursor: pointer;
 }
-button{
+button {
   border: none;
   background-color: transparent;
 }
 nav {
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   width: 100vw;
-  height: 110px;
+  height: 70px;
   padding: 0 60px;
   display: flex;
   flex-direction: row;
@@ -54,9 +60,29 @@ nav > ul > li {
 nav > ul > li:hover {
   font-weight: bold;
 }
-.scrolled{
+div.dropdown > ul li:hover{
+  font-weight: bold;
+}
+div.dropdown > ul li:not(:last-child) {
+  margin-bottom: 20px;
+}
+div.show{
+  display: block;
+}
+.dropdown {
+  z-index: -1;
+  display: none;
+  position: absolute;
+  right: 17px;
+  text-align: center;
+  width: 150px;
+  padding: 80px 10px 15px 10px;
+  color: #f2f2f2;
+  background-color: var(--red);
+  border-radius: 0 0 10px 10px;
+}
+.scrolled {
   background: var(--red);
-  transition: all ease-in-out 200ms;
 }
 .logo {
   font-size: 21px;
@@ -81,6 +107,7 @@ nav > ul > li:hover {
   align-items: center;
 }
 .slogan {
+  z-index: 1;
   transform: translateY(-40px);
   text-align: center;
 }
@@ -111,7 +138,7 @@ nav > ul > li:hover {
   color: transparent;
   -webkit-text-stroke: 1px whitesmoke;
 }
-.elem{
+.elem {
   display: grid;
   justify-content: center;
   justify-items: center;
@@ -119,59 +146,93 @@ nav > ul > li:hover {
   height: 100%;
   width: 100%;
 }
-.blob{
+.blob {
   position: relative;
   background: linear-gradient(to left, var(--green), var(--blue));
-  border-radius: 50% ;
+  border-radius: 50%;
 }
-.elem > *{
-  animation-timing-function: ease-in-out !important; 
+.elem > * {
+  animation-timing-function: ease-in-out !important;
   grid-column: 1;
   grid-row: 1;
 }
-.blob1{
+.blob1 {
   animation: blobIdle infinite 4s;
   height: 350px;
   width: 350px;
-
 }
-.blob2{
+.blob2 {
   animation: blobIdle infinite 7s;
   bottom: 170px;
   left: 220px;
   height: 50px;
   width: 50px;
 }
-.blob3{
+.blob3 {
   animation: blobIdle infinite 5.5s;
-  bottom : 200px;
+  bottom: 200px;
   right: 130px;
   height: 25px;
   width: 25px;
 }
-.blob4{
+.blob4 {
   animation: blobIdle infinite 4.5s;
   right: 260px;
   height: 70px;
   width: 70px;
 }
-.blob5{
-  animation: blobIdle infinite 5s ;
+.blob5 {
+  animation: blobIdle infinite 5s;
   right: 80px;
   top: 200px;
   height: 30px;
   width: 30px;
 }
-.blob6{
+.blob6 {
   animation: blobIdle infinite 6.5s;
   left: 180px;
   top: 150px;
   height: 40px;
   width: 40px;
 }
+div.contact > p {
+  margin-bottom: 10px;
+}
+.contact img:hover{
+  translate: 0 -2px;
+}
+.contact img {
+  transition: translate 100ms;
+  height: 20px;
+  width: 20px;
+}
+.contact > span {
+  display: flex;
+  justify-content: space-between;
+}
+footer>*{
+  height: fit-content;
+}
+footer {
+  display: grid;
+  padding: 0 100px;
+  padding-top: 50px;
+  justify-content: space-between;
+  grid-template-columns: repeat(2, auto);
+  width: 100vw;
+  height: 150px;
+  background-color: #222;
+  color: var(--gray);
+}
 /* animation section below */
 @keyframes blobIdle {
-  0%{transform: translateY(0px);}
-  50%{transform: translateY(30px);}
-  100%{transform: translateY(0px);}
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
