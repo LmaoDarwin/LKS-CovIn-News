@@ -4,28 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./styles/index.css" />
     <link rel="stylesheet" href="./styles/frame.css" />
+    <link rel="stylesheet" href="./styles/mediaQueries.css" />
     <script defer src="./scripts/script.js"></script>
     <title>CovIn News</title>
   </head>
   <body>
     <section class="bg-container">
       <nav id="navbar">
-        <div class="logo">COV-IN NEWS</div>
+        <div class="logo" translate="no">COV-IN NEWS</div>
         <ul>
           <li><a href="#"> Beranda </a></li>
-          <li><a href="#"> Kategori </a></li>
+          <li><a id="category"> Kategori </a></li>
         </ul>
+        <div class="dropdown">
+          <ul>
+            <li><a href="#latest">Berita Terbaru</a></li>
+            <li><a href="#other">Berita Lainnya</a></li>
+            <li><a href="#prevention">Pencegahan</a></li>
+          </ul>
+        </div>
       </nav>
-      <div class="main-bg" id="mainBg">
+      <div class="main-bg">
         <div class="slogan">
           <h1>COVID</h1>
           <p>
             <strong><i>Together</i></strong
             >, we cure.
           </p>
-          <a href="">Pencegahan covid ></a>
+          <a href="#prevention">Pencegahan covid ></a>
         </div>
         <div class="elem">
           <span class="blob1 blob"></span>
@@ -37,25 +46,25 @@
         </div>
       </div>
     </section>
-    <section class="container">
+    <section class="container" id="latest">
       <main class="frame">
         <div class="title">
           <h1>Berita Terbaru</h1>
         </div>
         <div class="news1">
-          <div class="snap">
-            <button style="left: 0" onclick="buttonScroll(0,'left')">
-              &lt;
-            </button>
+          <button style="left: 0" onclick="buttonScroll('left')">&lt;</button>
+          <div class="snap" id="snap">
             <div class="wrapper">
-              <img
-                src="./images/pic3.png"
-                height="400"
-                width="400"
-                alt="covid-19 news"
-              />
+              <a href="#">
+                <img
+                  src="./images/pic5 .jpg"
+                  height="400"
+                  width="400"
+                  alt="covid-19 news"
+                />
+              </a>
               <section class="content">
-                <h1>Sub Title Lorem, ipsum.</h1>
+                <h2>Sub Title Lorem, ipsum.</h2>
                 <h5>Author</h5>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non,
@@ -77,76 +86,346 @@
               </section>
             </div>
             <div class="wrapper">
-              <img
-                src="./images/pic2.png"
-                height="400"
-                width="400"
-                alt="covid-19 news"
-              />
+              <a href="#">
+                <img
+                  src="./images/pic4.jpeg"
+                  height="400"
+                  width="400"
+                  alt="covid-19 news"
+                />
+              </a>
               <section class="content">
-                <h1>Sub Title Lorem, ipsum.</h1>
+                <h2>Sub Title Lorem, ipsum.</h2>
                 <h5>Author</h5>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non,
-                  odio!
+                  odio! Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit. Corrupti ea distinctio ullam ducimus porro, nobis fugiat
+                  excepturi vel nesciunt hic optio saepe inventore minima? Modi
+                  quod veritatis quis minima magnam, iusto, sapiente magni natus
+                  optio explicabo ex omnis, officia molestias sed eos ab soluta
+                  animi? Nulla libero deleniti ad obcaecati et exercitationem
+                  illum temporibus, at voluptatum quasi, id nemo neque ducimus
+                  eum tempora dolorem commodi pariatur sequi dolore, laudantium
+                  aut soluta ea. Architecto atque repudiandae molestias commodi
+                  ipsam tenetur minima, quod facere, cupiditate porro neque
+                  natus sed ea ratione asperiores temporibus repellendus
+                  dolorem. Nostrum quas, nesciunt quo repudiandae dolor
+                  corporis?
                 </p>
                 <h6>12 January 2022</h6>
               </section>
             </div>
             <div class="wrapper">
-              <img
-                src="./images/pic1.png"
-                height="400"
-                width="400"
-                alt="covid-19 news"
-              />
+              <a href="#">
+                <img
+                  src="./images/pic6.webp"
+                  height="400"
+                  width="400"
+                  alt="covid-19 news"
+                />
+              </a>
               <section class="content">
-                <h1>Sub Title Lorem, ipsum.</h1>
+                <h2>Sub Title Lorem, ipsum.</h2>
                 <h5>Author</h5>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non,
-                  odio!
+                  odio! Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit. Corrupti ea distinctio ullam ducimus porro, nobis fugiat
+                  excepturi vel nesciunt hic optio saepe inventore minima? Modi
+                  quod veritatis quis minima magnam, iusto, sapiente magni natus
+                  optio explicabo ex omnis, officia molestias sed eos ab soluta
+                  animi? Nulla libero deleniti ad obcaecati et exercitationem
+                  illum temporibus, at voluptatum quasi, id nemo neque ducimus
+                  eum tempora dolorem commodi pariatur sequi dolore, laudantium
+                  aut soluta ea. Architecto atque repudiandae molestias commodi
+                  ipsam tenetur minima, quod facere, cupiditate porro neque
+                  natus sed ea ratione asperiores temporibus repellendus
+                  dolorem. Nostrum quas, nesciunt quo repudiandae dolor
+                  corporis?
                 </p>
                 <h6>12 January 2022</h6>
               </section>
             </div>
             <div class="wrapper">
-              <img
-                src="./images/pic2.png"
-                height="400"
-                width="400"
-                alt="covid-19 news"
-              />
+              <a href="#">
+                <img
+                  src="./images/pic3.png"
+                  height="400"
+                  width="400"
+                  alt="covid-19 news"
+                />
+              </a>
               <section class="content">
-                <h1>Sub Title Lorem, ipsum.</h1>
+                <h2>Sub Title Lorem, ipsum.</h2>
                 <h5>Author</h5>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non,
-                  odio!
+                  odio! Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit. Corrupti ea distinctio ullam ducimus porro, nobis fugiat
+                  excepturi vel nesciunt hic optio saepe inventore minima? Modi
+                  quod veritatis quis minima magnam, iusto, sapiente magni natus
+                  optio explicabo ex omnis, officia molestias sed eos ab soluta
+                  animi? Nulla libero deleniti ad obcaecati et exercitationem
+                  illum temporibus, at voluptatum quasi, id nemo neque ducimus
+                  eum tempora dolorem commodi pariatur sequi dolore, laudantium
+                  aut soluta ea. Architecto atque repudiandae molestias commodi
+                  ipsam tenetur minima, quod facere, cupiditate porro neque
+                  natus sed ea ratione asperiores temporibus repellendus
+                  dolorem. Nostrum quas, nesciunt quo repudiandae dolor
+                  corporis?
                 </p>
                 <h6>12 January 2022</h6>
               </section>
             </div>
-            <button style="right: 0" onclick="buttonScroll(0,'right')">
-              &gt;
-            </button>
+            <div class="wrapper">
+              <a href="#">
+                <img
+                  src="./images/pic1.png"
+                  height="400"
+                  width="400"
+                  alt="covid-19 news"
+                />
+              </a>
+              <section class="content">
+                <h2>Sub Title Lorem, ipsum.</h2>
+                <h5>Author</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non,
+                  odio! Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit. Corrupti ea distinctio ullam ducimus porro, nobis fugiat
+                  excepturi vel nesciunt hic optio saepe inventore minima? Modi
+                  quod veritatis quis minima magnam, iusto, sapiente magni natus
+                  optio explicabo ex omnis, officia molestias sed eos ab soluta
+                  animi? Nulla libero deleniti ad obcaecati et exercitationem
+                  illum temporibus, at voluptatum quasi, id nemo neque ducimus
+                  eum tempora dolorem commodi pariatur sequi dolore, laudantium
+                  aut soluta ea. Architecto atque repudiandae molestias commodi
+                  ipsam tenetur minima, quod facere, cupiditate porro neque
+                  natus sed ea ratione asperiores temporibus repellendus
+                  dolorem. Nostrum quas, nesciunt quo repudiandae dolor
+                  corporis?
+                </p>
+                <h6>12 January 2022</h6>
+              </section>
+            </div>
+            <div class="wrapper">
+              <a href="#">
+                <img
+                  src="./images/pic2.png"
+                  height="400"
+                  width="400"
+                  alt="covid-19 news"
+                />
+              </a>
+              <section class="content">
+                <h2>Sub Title Lorem, ipsum.</h2>
+                <h5>Author</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non,
+                  odio! Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit. Corrupti ea distinctio ullam ducimus porro, nobis fugiat
+                  excepturi vel nesciunt hic optio saepe inventore minima? Modi
+                  quod veritatis quis minima magnam, iusto, sapiente magni natus
+                  optio explicabo ex omnis, officia molestias sed eos ab soluta
+                  animi? Nulla libero deleniti ad obcaecati et exercitationem
+                  illum temporibus, at voluptatum quasi, id nemo neque ducimus
+                  eum tempora dolorem commodi pariatur sequi dolore, laudantium
+                  aut soluta ea. Architecto atque repudiandae molestias commodi
+                  ipsam tenetur minima, quod facere, cupiditate porro neque
+                  natus sed ea ratione asperiores temporibus repellendus
+                  dolorem. Nostrum quas, nesciunt quo repudiandae dolor
+                  corporis?
+                </p>
+                <h6>12 January 2022</h6>
+              </section>
+            </div>
           </div>
+          <button style="right: 0" onclick="buttonScroll('right')">
+            &gt;
+          </button>
         </div>
       </main>
     </section>
-    <section class="container">
+    <section class="container" id="other">
       <main class="frame second">
-        <div class="content other">
+        <div class="content">
           <div class="title">
             <h1>Berita Lainnya</h1>
           </div>
+          <div class="news2">
+            <div class="wrapper">
+              <a href="#">
+                <img src="./images/pic6.webp" alt="pic" />
+              </a>
+              <section class="content">
+                <h2>
+                  Sub title, Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit.
+                </h2>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quisquam facilis commodi veritatis maxime tenetur officiis.
+                  Quam voluptate quod dolorum velit.
+                </p>
+                <h6>12 January 2023</h6>
+              </section>
+            </div>
+            <div class="wrapper">
+              <a href="#">
+                <img src="./images/pic3.png" alt="pic" />
+              </a>
+              <section class="content">
+                <h2>
+                  Sub title, Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit.
+                </h2>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quisquam facilis commodi veritatis maxime tenetur officiis.
+                  Quam voluptate quod dolorum velit.
+                </p>
+                <h6>12 January 2023</h6>
+              </section>
+            </div>
+            <div class="wrapper">
+              <a href="#">
+                <img src="./images/pic2.png" alt="pic" />
+              </a>
+              <section class="content">
+                <h2>
+                  Sub title, Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit.
+                </h2>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quisquam facilis commodi veritatis maxime tenetur officiis.
+                  Quam voluptate quod dolorum velit.
+                </p>
+                <h6>12 January 2023</h6>
+              </section>
+            </div>
+          </div>
         </div>
-        <div class="content upcoming">
+        <div class="content">
           <div class="title">
             <h1>Acara Mendatang</h1>
           </div>
+          <div class="upcoming">
+            <div class="wrapper">
+              <a href="#">
+                <h4>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Ullam, a?
+                </h4>
+              </a>
+            </div>
+            <div class="wrapper">
+              <a href="#">
+                <h4>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ducimus, iusto.
+                </h4>
+              </a>
+            </div>
+            <div class="wrapper">
+              <a href="#">
+                <h4>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Culpa, impedit.
+                </h4>
+              </a>
+            </div>
+            <div class="wrapper">
+              <a href="#">
+                <h4>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+                  nihil.
+                </h4>
+              </a>
+            </div>
+            <div class="wrapper">
+              <a href="#">
+                <h4>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Architecto, nesciunt.
+                </h4>
+              </a>
+            </div>
+            <div class="wrapper">
+              <a href="#">
+                <h4>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Architecto, nesciunt.
+                </h4>
+              </a>
+            </div>
+            <div class="wrapper">
+              <a href="#">
+                <h4>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Architecto, nesciunt.
+                </h4>
+              </a>
+            </div>
+            <div class="wrapper">
+              <a href="#">
+                <h4>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Architecto, nesciunt.
+                </h4>
+              </a>
+            </div>
+            <div class="wrapper">
+              <a href="#">
+                <h4>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Architecto, nesciunt.
+                </h4>
+              </a>
+            </div>
+          </div>
+        </div>
+        <button class="sa">Lihat Selengkapnya &gt;</button>
+      </main>
+    </section>
+    <section class="container">
+      <main class="frame">
+        <div class="prevention" id="prevention">
+          <span><h1>M</h1></span>
+          <span
+            ><h2>1. Memakai Masker</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernatur, pariatur.
+            </p>
+            <h2>2. Mencuci Tangan</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+              sit.
+            </p>
+            <h2>3. Menjaga Jarak</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Repellendus, commodi ipsam. Quia!
+            </p></span
+          >
         </div>
       </main>
     </section>
+    <footer>
+      <div><p>Copyright &#64; 2023 Covin News</p></div>
+      <div class="contact">
+        <p>Hubungi Kami</p>
+        <span
+          ><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
+            ><img src="images/fb.png" alt="facebook" /></a
+          ><a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"
+            ><img src="images/twt.png" alt="twitter" /></a
+          ><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+            ><img src="images/ig.png" alt="instagram" /></a
+        ></span>
+      </div>
+    </footer>
   </body>
 </html>

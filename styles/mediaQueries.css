@@ -1,0 +1,128 @@
+@media only screen and (max-width: 992px) {
+  .main-bg {
+    grid-template-columns: 1fr;
+  }
+  .slogan,
+  .elem {
+    grid-column: 1/1;
+    grid-row: 1/1;
+  }
+  .slogan h1 {
+    translate: -31px;
+  }
+  .frame {
+    width: 728px;
+  }
+  .news1 .wrapper img {
+    width: 250px;
+    height: 250px;
+  }
+  .title {
+    font-size: 0.9rem;
+  }
+  .content h2,
+  .upcoming h4 {
+    font-size: 14px;
+  }
+  .content h5 {
+    font-size: 10px;
+  }
+  .content p {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .frame {
+    width: 570px;
+  }
+  .news1 .wrapper img {
+    display: none;
+  }
+  .title {
+    font-size: 0.7rem;
+  }
+  .frame.second {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+  }
+  .frame.second div:nth-child(2) {
+    grid-area: 3/1;
+  }
+  div.news1 .wrapper{
+    grid-template-columns: auto;
+  }
+  button.sa {
+    margin: 10px 0;
+  }
+}
+@media only screen and (max-width: 425px) {
+  nav {
+    padding: 0 30px;
+  }
+  nav > ul{
+    gap: 5px;
+  }
+  nav > ul > li > a {
+    font-size: 12px;
+  }
+  button.sa:hover{
+    padding: 5px 12px;
+  }
+  button.sa{
+    padding: 5px 0;
+    font-size: small;
+  }
+  .slogan h1 {
+    font-size: 100px;
+  }
+  .slogan h1::after {
+    font-size: 23px;
+    padding-top: 25px;
+  }
+  .slogan p {
+    font-size: medium;
+  }
+  .slogan a {
+    font-size: smaller;
+    line-height: 30px;
+  }
+  .frame {
+    width: 350px;
+  }
+  .news1 button {
+    font-size: 25px;
+    min-height: 30px;
+    min-width: 30px;
+  }
+  .news2 section.content p{
+    display: none;
+  }
+  .news2 .wrapper img {
+    height: 110px;
+    width: 110px;
+  }
+  .prevention {
+    grid-template-columns: auto;
+    height: 250px;
+  }
+  .prevention span:nth-child(1) {
+    display: none;
+  }
+  .prevention span:nth-child(2) {
+    font-size: 12px;
+  }
+  footer{
+    font-size: small;
+    padding: 0 30px;
+    padding-top: 30px;
+  }
+  .contact img{
+    width: 15px;
+    height: 15px;
+  }
+  .dropdown{
+    right: 18px;
+    width: 90px;
+    font-size: 9px;
+  }
+}
